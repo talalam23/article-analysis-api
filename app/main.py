@@ -1,15 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from summarizer import generate_summary
-from keywords import extract_keywords
-
+from app.summarizer import generate_summary
+from app.keywords import extract_keywords
 
 app = FastAPI(title="Article Analysis API")
 
-
 class ArticleRequest(BaseModel):
     text: str
-
 
 @app.post("/summarize")
 def summarize(request: ArticleRequest):

@@ -1,5 +1,6 @@
 fastapi
 uvicorn
 pydantic
-yake
 gradio_client
+scikit-learn
+numpy
